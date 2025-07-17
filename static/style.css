@@ -93,6 +93,10 @@ a:hover {
     color: #005f73;
     text-decoration: underline;
 }
+a:focus {
+    outline: 2px solid #005f73;
+    outline-offset: 2px;
+}
 @media (max-width: 600px) {
     .container {
         padding: 18px 6px 18px 6px;
