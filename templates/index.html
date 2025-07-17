@@ -10,7 +10,7 @@
 <body>
     <div class="container">
         <header>
-            <img src="{{ url_for('static', filename='jb_headshot.jpg') }}" alt="Profile image" class="profile-img" />
+            <img src="{{ url_for('static', filename='jb_headshot.jpg') }}" alt="{{ name }}'s headshot" class="profile-img" />
             <h1>{{ name }}</h1>
             <p class="tagline">{{ tagline }}</p>
         </header>
