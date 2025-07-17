@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{{ url_for('static', filename='jb_headshot.jpg') }}" alt="Profile image" class="profile-img" />
+            <h1>{{ name }}</h1>
+            <p class="tagline">{{ tagline }}</p>
+        </header>
+        <section>
+            <h2>About Me</h2>
+            <p>{{ about }}</p>
+        </section>
+        <section>
+            <h2>I help companies with</h2>
+            <ul>
+                {% for item in help_items %}
+                <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:{{ email }}">{{ email }}</a></p>
+        </section>
+    </div>
+</body>
+</html>
